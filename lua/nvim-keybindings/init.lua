@@ -47,7 +47,7 @@ vim.api.nvim_set_keymap("n", "<leader>fg", ":Telescope live_grep<CR>", { noremap
 --------------------------------------
 
 -- Key mappings for session management
-vim.api.nvim_set_keymap("n", "<leader>vv", ":Autosession search<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>vd", ":DeleteSession<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", ",vv", ":Autosession search<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", ",vd", ":DeleteSession<CR>", { noremap = true, silent = true })
 
 return M
