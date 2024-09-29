@@ -7,13 +7,17 @@ function M.setup() end
 --------------------------------------
 -- FTerm
 --------------------------------------
+--
+-- vim.api.nvim_set_keymap("n", "<A-i>", '<CMD>lua require("FTerm").toggle()<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap(
+-- 	"t",
+-- 	"<A-i>",
+-- 	'<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>',
+-- 	{ noremap = true, silent = true }
+-- )
 
-vim.api.nvim_set_keymap("n", "<A-i>", '<CMD>lua require("FTerm").toggle()<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap(
-	"t",
-	"<A-i>",
-	'<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>',
-	{ noremap = true, silent = true }
-)
+-- Keybinding to toggle the same terminal session later
+vim.api.nvim_set_keymap("n", "<A-i>", "<CMD>lua toggle_my_term()<CR>", { noremap = true, silent = true })
 
+vim.api.nvim_set_keymap("t", "<A-i>", "<C-\\><C-n><CMD>lua toggle_my_term()<CR>", { noremap = true, silent = true })
 return M
