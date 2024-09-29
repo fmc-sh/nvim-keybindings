@@ -42,4 +42,12 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap("n", "<leader>ff", ":Telescope find_files<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>fg", ":Telescope live_grep<CR>", { noremap = true, silent = true })
 
+--------------------------------------
+-- Autosession
+--------------------------------------
+
+-- Key mappings for session management
+vim.api.nvim_set_keymap("n", "vv", ":Autosession search<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "vd", ":DeleteSession<CR>", { noremap = true, silent = true })
+
 return M
