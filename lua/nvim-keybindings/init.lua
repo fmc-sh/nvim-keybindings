@@ -43,7 +43,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
 	"n",
 	"<A-i>",
-	':lua require("your_module_name").toggle_my_term()<CR>',
+	':lua require("nvim-term-init").toggle_my_term()<CR>',
 	{ noremap = true, silent = true }
 )
 
@@ -51,7 +51,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
 	"t",
 	"<A-i>",
-	'<C-\\><C-n>:lua require("your_module_name").toggle_my_term()<CR>',
+	'<C-\\><C-n>:lua require("nvim_term_init").toggle_my_term()<CR>',
 	{ noremap = true, silent = true }
 )
 
