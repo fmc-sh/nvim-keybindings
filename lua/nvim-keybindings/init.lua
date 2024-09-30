@@ -36,11 +36,27 @@ vim.api.nvim_set_keymap(
 )
 
 --------------------------------------
--- FTerm
+-- Nvim term init (personal)
 --------------------------------------
 
-vim.api.nvim_set_keymap("n", "<leader>ff", ":Telescope find_files<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>fg", ":Telescope live_grep<CR>", { noremap = true, silent = true })
+-- Keybinding to toggle terminal in normal mode
+vim.api.nvim_set_keymap(
+	"n",
+	"<A-i>",
+	':lua require("your_module_name").toggle_my_term()<CR>',
+	{ noremap = true, silent = true }
+)
+
+-- Keybinding to toggle terminal in terminal mode
+vim.api.nvim_set_keymap(
+	"t",
+	"<A-i>",
+	'<C-\\><C-n>:lua require("your_module_name").toggle_my_term()<CR>',
+	{ noremap = true, silent = true }
+)
+
+-- Bind Alt + j to switch to normal mode in terminal
+vim.api.nvim_set_keymap("t", "<A-j>", "<C-\\><C-n>", { noremap = true, silent = true })
 
 --------------------------------------
 -- Vim-obsession
