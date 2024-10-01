@@ -35,14 +35,15 @@ vim.api.nvim_set_keymap(
 	{ noremap = true, silent = true }
 )
 
---------------------------------------
--- Nvim term init (personal)
---------------------------------------
-
--- Set a keybinding to toggle the terminal with Alt + i
-vim.api.nvim_set_keymap("n", "<A-i>", ":TTToggle<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("t", "<A-i>", "<C-\\><C-n>:TTToggle<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "<A-i>", "<C-\\><C-n>:TTToggle<CR>", { noremap = true, silent = true })
+-- Not used, have abstracted solution, keys imported here soon
+-- --------------------------------------
+-- -- Nvim term init (personal)
+-- --------------------------------------
+--
+-- -- Set a keybinding to toggle the terminal with Alt + i
+-- vim.api.nvim_set_keymap("n", "<A-i>", ":TTToggle<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("t", "<A-i>", "<C-\\><C-n>:TTToggle<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("i", "<A-i>", "<C-\\><C-n>:TTToggle<CR>", { noremap = true, silent = true })
 
 -- Bind Alt + j to switch to normal mode in terminal
 vim.api.nvim_set_keymap("t", "<A-j>", "<C-\\><C-n>", { noremap = true, silent = true })
