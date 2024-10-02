@@ -60,7 +60,7 @@ local session_dir = vim.fn.expand("~/.vim-sessions")
 -- Function to save the current session
 function SaveObsessionSession()
 	local session_name = vim.fn.substitute(vim.fn.getcwd(), "/", "_", "g") -- Replace slashes with underscores
-	local session_path = session_dir .. "/" .. session_name .. ".vim"
+	local session_path = session_dir .. "/" .. session_name
 	vim.cmd("Obsess " .. session_path)
 	print("Session saved to " .. session_path)
 end
